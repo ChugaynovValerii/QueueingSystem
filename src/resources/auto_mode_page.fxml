@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.Scene?>
+<Scene fx:id="autoModePage" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="controllers.AutoModeController">
+    <AnchorPane prefHeight="400.0" prefWidth="600.0">
+        <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Sources statistic">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <TableView fx:id="srcTable" layoutX="25.0" layoutY="15.0" prefHeight="340.0"
+                               prefWidth="550.0">
+                        <columns>
+                            <TableColumn fx:id="srcId" prefWidth="25" text="Id"
+                                         style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcCount" prefWidth="40" text="Count"
+                                         style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcFailProb" prefWidth="65.0" text="Fail prob"
+                                         style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcAverageTimeInSystem" prefWidth="92"
+                                         text="Avg t in system" style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcAverageTimeInBuffer" prefWidth="92"
+                                         text="Avg t in buffer" style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcAverageTimeInDevice" prefWidth="92"
+                                         text="Avg t in device" style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcDispersionServiceTime" prefWidth="72"
+                                         text="σ service t" style="-fx-alignment: center"/>
+                            <TableColumn fx:id="srcDispersionBufferTime" prefWidth="72"
+                                         text="σ buffer t" style="-fx-alignment: center"/>
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+            <Tab text="Devices statistic">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <TableView fx:id="deviceTable" layoutX="25.0" layoutY="15.0" prefHeight="340.0"
+                               prefWidth="550.0">
+                        <columns>
+                            <TableColumn fx:id="deviceId" prefWidth="275" text="Id"
+                                         style="-fx-alignment: center"/>
+                            <TableColumn fx:id="deviceLoadFactor" minWidth="0.0" prefWidth="275.0"
+                                         text="Load factor" style="-fx-alignment: center"/>
+                        </columns>
+                    </TableView>
+                </AnchorPane>
+            </Tab>
+
+        </TabPane>
+
+
+    </AnchorPane>
+</Scene>
